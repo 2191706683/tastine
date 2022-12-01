@@ -1,0 +1,7 @@
+/* pages/didi/didi.wxss */
+swiper-item {
+  height: 400rpx;
+}
+.higher_menus {
+  height: 800rpx;
+}
