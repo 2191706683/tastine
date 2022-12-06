@@ -1,0 +1,31 @@
+<view class="page">
+  <view class="page__hd"></view>
+  <view class="page__bd">
+    <!-- Block map controller -->
+    <view class="bw_mapController">
+      <view class="bw_mapController__hd">
+        <view class="bw_mapController__title">
+          东华理工大学(广兰校区)
+        </view>
+      </view>
+      <block wx:if="{{!showMap}}">
+        <view class="bw_mapController__btn">查看地图</view>
+      </block>
+      <view 
+      class="bw_mapController__bd {{!showMap?'bw_mapController_bd-hide':''}}">
+        <map
+          show-location="{{true}}"
+          latitude="{{latitude}}"
+          longitude="{{longitude}}"
+        >
+        </map>
+        <view 
+          bindtap="toggleMap"
+          class="bw_mapController__switch">
+          收起地图
+        </view>
+      </view>
+      
+    </view>
+  </view>
+</view>
